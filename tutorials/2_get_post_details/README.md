@@ -1,4 +1,4 @@
-# Get Post details
+# Get post details
 
 This tutorial pulls a list of the posts from the blockchain with `created` filter and tag then display selected post details.
 
