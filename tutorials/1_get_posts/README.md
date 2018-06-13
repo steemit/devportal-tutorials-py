@@ -1,4 +1,4 @@
-# Get Post list with selected filter and tag
+# Get post list with selected filter and tag
 
 This tutorial pulls a list of the posts from the blockchain with selected filter and tag then displays output.
 
