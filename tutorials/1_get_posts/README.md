@@ -33,7 +33,7 @@ First we import all three library and initialize Steem class
     s = Steem()
 ```
 
-#### 2. Filters list
+#### 2. Filters list <a name="filters-list"></a>
 
 Next we will make list of filters and setup `pick` properly.
 
@@ -47,7 +47,7 @@ Next we will make list of filters and setup `pick` properly.
 
 This will show us list of filters to select in terminal/command prompt. And after selection we will get index and filter name to `index` and `option` variables.
 
-#### 3. Query details
+#### 3. Query details <a name="query-details"></a>
 
 Next we will form a query. In Steem, 
 
@@ -70,7 +70,7 @@ posts = {0: s.get_discussions_by_trending(query),
 
 Above code shows example of query and simple list of function that will fetch post list with user selected filter.
 
-#### 4. Print output
+#### 4. Print output <a name="print-output"></a>
 
 Next, we will print result, post list and selected filter name.
 
