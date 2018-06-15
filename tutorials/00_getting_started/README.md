@@ -25,4 +25,4 @@ In our Python tutorials we recommend developers to be familiar with following re
 
 To get started with Python, you can also check official [Python installation](https://wiki.python.org/moin/BeginnersGuide/Download) and [Python tutorial](https://docs.python.org/3/tutorial/).
 
-To get started with our Python tutorials, checkout [first tutorial](/tutorials/1_get_posts/).
+To get started with our Python tutorials, checkout our [first tutorial here](/tutorials/1_get_posts/).
