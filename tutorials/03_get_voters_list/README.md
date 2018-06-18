@@ -110,7 +110,7 @@ That's it!
 ### To Run the tutorial
 
 1.  clone this repo
-1.  `cd tutorials/3_get_voters_list`
+1.  `cd tutorials/03_get_voters_list`
 1.  `pip install -r requirements.txt`
 1.  `python index.py`
 1.  After a few moments, you should see output in terminal/command prompt screen.

@@ -11,8 +11,10 @@ The tutorials build on each other. It's suggested you go through them in-order.
 
 ## Tutorial List
 
-1.  [Get Posts](tutorials/01_get_posts) - Pull the list of posts from different tags and filters
-
+1.  [Get posts](tutorials/01_get_posts) - Pull the list of posts from different tags and filters
+1.  [Get post details](tutorials/02_get_post_details) - Pull details of selected post
+1.  [Get voters list](tutorials/03_get_voters_list) - Fetch list of voters on selected post
+1.  [Get post replies](tutorials/04_get_post_replies) - Get replies made on selected post
 
 
 ## To Run one of the tutorials
@@ -25,7 +27,7 @@ Use the command line/terminal for the following instructions
 
 1.  cd into the tutorial you wish to run
 
-    ex: `cd tutorials/1_get_posts`
+    ex: `cd tutorials/01_get_posts`
 
 1.  Use pip to install dependencies
 

@@ -182,7 +182,7 @@ That's it!
 ### To Run the tutorial
 
 1.  clone this repo
-1.  `cd tutorials/4_get_post_replies`
+1.  `cd tutorials/04_get_post_replies`
 1.  `pip install -r requirements.txt`
 1.  `python index.py`
 1.  After a few moments, you should see output in terminal/command prompt screen.
