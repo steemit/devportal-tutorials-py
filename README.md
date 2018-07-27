@@ -11,10 +11,17 @@ The tutorials build on each other. It's suggested you go through them in-order.
 
 ## Tutorial List
 
+1.  [Dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements) - Environment requirements for developers
 1.  [Get posts](tutorials/01_get_posts) - Pull the list of posts from different tags and filters
 1.  [Get post details](tutorials/02_get_post_details) - Pull details of selected post
 1.  [Get voters list](tutorials/03_get_voters_list) - Fetch list of voters on selected post
 1.  [Get post replies](tutorials/04_get_post_replies) - Get replies made on selected post
+1.  [Get account replies](tutorials/05_get_account_replies) - Get replies received on account's content
+1.  [Get account comments](tutorials/09_get_account_comments) - Fetch comments made by account
+1.  [Submit post](tutorials/10_get_submit_post) - Submit story
+1.  [Reblog post](tutorials/11_reblog_post) - Reblog or Resteem post
+1.  [Using keys securely](tutorials/12_using_keys_securely) - Using private keys securely
+1.  [Account reputation](tutorials/13_account_reputation) - Interpret account reputation
 
 
 ## To Run one of the tutorials

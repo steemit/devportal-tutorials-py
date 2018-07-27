@@ -1,12 +1,10 @@
 # Reblog post
 
-In this tutorial, we will show how to reblog post with your username and posting private key.
+We will show how to reblog or resteem post using Python, with username and posting private key.
 
 Tutorial will also explain and show you how to sign/broadcast transaction on **Steem** blockchain using the [steem-python](https://github.com/steemit/steem-python) library.
 
 ## Intro
-
-All python tutorials will be in Python3 and developers following these tutorials should have sufficient knowlegde to use pip/pip3 package manager. Your development environment should be set up properly to test these tutorials.
 
 Steem python library has built-in function to commit transaction and broadcast it to the network. 
 
@@ -79,6 +77,7 @@ That's it, if transaction is successful you shouldn't see any error messages, ot
 
 ### To Run the tutorial
 
+1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
 1.  clone this repo
 1.  `cd tutorials/11_reblog_post`
 1.  `pip install -r requirements.txt`
