@@ -1,10 +1,8 @@
 # Account reputation
 
-_By the end of this tutorial you would know how to interpret account reputation to more human readable format._
+Would you like to know how to interpret account reputation to more human readable format, then this tutorial is for you.
 
 ## Intro
-
-All python tutorials will be in Python3 and developers following these tutorials should have sufficient knowledge to use pip/pip3 package manager. Your development environment should be set up properly to test these tutorials.
 
 Account reputation is long integer string which requires special function or formula to convert in more human readable format. We will define that function in this tutorial and show how to fetch and interpret reputation.
 
@@ -96,6 +94,7 @@ That's it. We have successfully interpreted reputation.
 
 ### To Run the tutorial
 
+1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
 1.  clone this repo
 1.  `cd tutorials/13_account_reputation`
 1.  `pip install -r requirements.txt`

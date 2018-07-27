@@ -9,6 +9,8 @@ Documentation is available at: [Official steem-python Docs](https://github.com/s
 
 ---
 
+#### Dev requirements
+
 In our Python tutorials we recommend developers to be familiar with following requirements/libraries.
 
 
