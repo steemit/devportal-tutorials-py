@@ -1,37 +1,35 @@
 # Submit comment
 
-_By the end of this tutorial you should know how to submit a comment on a post to the Steem blockchain._
+How to submit a comment on a post to the Steem blockchain.
 
 This tutorial will explain and show you how to submit a new comment to the `Steem` blockchain using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
 
 ## Intro
 
-All python tutorials will be in Python3 and developers following these tutorials should have sufficient knowlegde to use pip/pip3 package manager. Your development environment should be set up properly to test these tutorials.
-
-The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `post` method found within the `commit` class in the the library. It should be noted that comments and new post are both treated as a `commit.post` operation with the only difference being that a comment/reply has got an additional parameter containing the `parent post/comment`. There are 11 parameters within the `post` method:
+The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `post` method found within the `commit` class in the the library. It should be noted that comments and post are both treated as a `commit.post` operation with the only difference being that a comment/reply has an additional parameter containing the `parent post/comment`. There are 11 parameters within the `post` method:
 
 1. _title_ - The title of the post. This is a required parameter but comments don't have a title so the parameter is assigned an empty string value
-2. _body_ - The body of the post
-3. _author_ - The account that you are posting from
-4. _permlink_ - A unique adentifier for the
-5. _tags_ - Between 1 and 5 key words that defines the post
-6. _reply_idendifier_ - Identifier of the parent post(used for comments)
-7. _json_metadata_ - JSON meta objec that can be attached to the post
-8. _comment_options_ - JSON options object that can be attached to the post to specify additional options like 'max_payouts', 'allow_votes', etc.
-9. _community_ - Name of the community you are posting into
-10. _beneficiaries_ - A list of beneficiaries for posting reward distribution.
-11. _self_vote_ - Upvote the post as author right after posting
+1. _body_ - The body of the post
+1. _author_ - The account that you are posting from
+1. _permlink_ - A unique adentifier for the
+1. _tags_ - Between 1 and 5 key words that defines the post
+1. _reply_idendifier_ - Identifier of the parent post(used for comments)
+1. _json_metadata_ - JSON meta objec that can be attached to the post
+1. _comment_options_ - JSON options object that can be attached to the post to specify additional options like 'max_payouts', 'allow_votes', etc.
+1. _community_ - Name of the community you are posting into
+1. _beneficiaries_ - A list of beneficiaries for posting reward distribution.
+1. _self_vote_ - Upvote the post as author right after posting
 
-We will only be using parameters numbers 1,2,3,4 and 6 as these are the only ones required to create a basic comment. If you want to explore the other parameters further you can find more information [HERE](http://steem.readthedocs.io/en/latest/core.html).
+We will only be using the parameters titel, body, author, permlink and reply_identifier as they are all that is required for a basic comment operation. If you want to explore the other parameters further you can find more information [HERE](http://steem.readthedocs.io/en/latest/core.html).
 
 A comment made on a post is defined as a `root comment`. You can also comment on someone elses (or your own) comment, in which case the `parent` parameters would be that of the comment, and not the original post.
 
 ## Steps
 
 1.  [**App setup**](#setup) - Library install and import. Connection to Steem node
-2.  [**Variable input and format**](#input) - Input and creation of varialbes
-3.	[**Initialize steem class**](#steem) - Initialize the steem class with the relevant node and private key
-4.  [**Post submission and result**](#submit) - Committing of transaction to the blockchain
+1.  [**Variable input and format**](#input) - Input and creation of varialbes
+1.	[**Initialize steem class**](#steem) - Initialize the steem class with the relevant node and private key
+1.  [**Post submission and result**](#submit) - Committing of transaction to the blockchain
 
 #### 1. App setup <a name="setup"></a>
 
@@ -110,8 +108,9 @@ You can also check on the [testportal](http://condenser.steem.vc/blog/@cdemo) fo
 
 ### To Run the tutorial
 
+1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
 1.  clone this repo
-2.  `cd tutorials/14_submit_comment_reply`
-3.  `pip install -r requirements.txt`
-4.  `python index.py`
-5.  After a few moments, you should see a prompt for input in terminal screen.
+1.  `cd tutorials/14_submit_comment_reply`
+1.  `pip install -r requirements.txt`
+1.  `python index.py`
+1.  After a few moments, you should see a prompt for input in terminal screen.
