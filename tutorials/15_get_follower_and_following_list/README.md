@@ -6,7 +6,7 @@ This tutorial will explain and show you how to access the **Steem** blockchain u
 
 ## Intro
 
-We are using the `get_followers` and `get_following` functions that are built-in in the official library `steem-python`. These functions allow us to query the Steem blockchain in order to retrieve either a list of authors that are being followed or a list of authors that are currently following a specified user. There are 4 parameters required to execute these functions:
+We are using the `get_followers` and `get_following` functions that are built into the official library `steem-python`. These functions allow us to query the Steem blockchain in order to retrieve either a list of authors that are being followed or a list of authors that are currently following a specified user. There are 4 parameters required to execute these functions:
 
 1.  _account_ - The specific user for which the follower(ing) list will be retrieved
 1.  _start follower(ing)_ - The starting letter(s) or name for the search query. This value can be set as an empty string in order to include all authors starting from "a"
