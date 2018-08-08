@@ -80,11 +80,7 @@ If the author check comes back with a value we use a simple `if` statement to in
 if result :
 	#check for author name in the current following list
 	follow = s.get_following(username, author, 'blog', 1)
-	lists = []
-	for following in follow:
-		lists.append(following['following'])
-	#if author name does exist
-	if lists[0]==author:
+	if len(follow) > 0 and follow[0]['following'] == author :
 		title = "Author is already being followed, please choose action"
 	else:
 		title = "Author has not yet been followed, please choose action"
@@ -101,7 +97,7 @@ options = ['Follow', 'Unfollow', 'Exit']
 option, index = pick(options, title)
 ```
 
-Once we know what the user wants to do, we can move on to the actual `commit` to the blockhain.
+Once we know what the user wants to do, we can move on to the actual `commit` to the blockchain.
 
 #### 5. Follow/Unfollow commit<a name="commit"></a>
 
@@ -127,7 +123,7 @@ You can also check on the [testportal](http://condenser.steem.vc/blog/@cdemo) fo
 
 1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
 1.  clone this repo
-2.  `cd tutorials/16_follow_another_user`
-3.  `pip install -r requirements.txt`
-4.  `python index.py`
-5.  After a few moments, you should see a prompt for input in terminal screen.
+1.  `cd tutorials/16_follow_another_user`
+1.  `pip install -r requirements.txt`
+1.  `python index.py`
+1.  After a few moments, you should see a prompt for input in terminal screen.

@@ -24,10 +24,7 @@ result = s.get_account(author)
 if result :
 	#check current follow status of specified author
 	follow = s.get_following(username, author, 'blog', 1)
-	lists = []
-	for following in follow:
-		lists.append(following['following'])
-	if lists[0]==author:
+	if len(follow) > 0 and follow[0]['following'] == author :
 		title = "Author is already being followed, please choose action"
 	else:
 		title = "Author has not yet been followed, please choose action"
