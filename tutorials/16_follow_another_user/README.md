@@ -1,4 +1,4 @@
-# Submit post
+# Follow another user
 
 How to follow or unfollow an author using Python.
 
