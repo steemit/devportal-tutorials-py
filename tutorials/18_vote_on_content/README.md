@@ -1,4 +1,4 @@
-# Submit post
+# Vote on content
 
 How to  vote on a post/comment using Python.
 
