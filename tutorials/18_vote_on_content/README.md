@@ -6,7 +6,7 @@ In this tutorial we will explain and show you how to to check if a user has vote
 
 ## Intro
 
-The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `vote` method found within the `commit` class in the the library. Before we vote on content we first check whether the user has already voted. This is not strictly necessary as a voting operation overrides the previous vote value. We use the `get_active_votes` function to check for this. This function only requires two parameters, the `author` and the `permlink` for the comment/post that the query is for. This returns a list of the current voters for that comment. The `vote` function has 3 parameters:
+Voting is a way of promoting good content via an `upvote` or reporting misuse, spam or other unfit content by `downvoting`. The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `vote` method found within the `commit` class in the the library. Before we vote on content we first check whether the user has already voted. This is not strictly necessary as a voting operation overrides the previous vote value. We use the `get_active_votes` function to check for this. This function only requires two parameters, the `author` and the `permlink` for the comment/post that the query is for. This returns a list of the current voters for that comment. The `vote` function has 3 parameters:
 
 1.  _identifier_ - This is a combination of the author and permink of the post/comment that the vote will be on
 1.  _weight_ - This value determines whether the vote is an upvote (+100.0) or a downvote (-100.0) but this value cannot be 0
@@ -51,7 +51,7 @@ We also require the `private posting key` of the user that wishes to vote on the
 username = input('Please enter your username: ')
 postingkey = input('Please enter your private posting key: ')
 
-#connect node and private posting key, demo account being used: cdemo, posting key: 5JEZ1EiUjFKfsKP32b15Y7jybjvHQPhnvCYZ9BW62H1LDUnMvHz
+#connect node and private posting key, demo account name: cdemo, posting key: 5JEZ1EiUjFKfsKP32b15Y7jybjvHQPhnvCYZ9BW62H1LDUnMvHz
 s = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[postingkey])
 ```
 
