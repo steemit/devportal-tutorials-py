@@ -24,7 +24,6 @@ The Steem python library has a built-in function to transmit transactions to the
 In this tutorial we use 3 packages:
 
 - `steem` - steem-python library and interaction with Blockchain
-- `steembase` - used to connect to the testnet
 - `pick` - helps select the query type interactively
 
 We import the libraries and connect to the `testnet`.
