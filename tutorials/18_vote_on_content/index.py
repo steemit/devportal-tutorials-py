@@ -1,6 +1,7 @@
 import steembase
 import steem
 from pick import pick
+from steembase.exceptions import RPCError, RPCErrorRecoverable
 
 # connect to testnet
 steembase.chains.known_chains['STEEM'] = {
@@ -9,8 +10,8 @@ steembase.chains.known_chains['STEEM'] = {
 }
 
 #capture user information
-username = input('Please enter your username: ')
-postingkey = input('Please enter your private posting key: ')
+username = input('Please enter your username: ') #'cdemo'
+postingkey = input('Please enter your private posting key: ') #'5JEZ1EiUjFKfsKP32b15Y7jybjvHQPhnvCYZ9BW62H1LDUnMvHz'
 
 #connect node and private posting key, demo account being used: cdemo, posting key: 5JEZ1EiUjFKfsKP32b15Y7jybjvHQPhnvCYZ9BW62H1LDUnMvHz
 s = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[postingkey])
@@ -20,12 +21,14 @@ author = input('Author of post/comment that you wish to vote for: ')
 permlink = input('Permlink of the post/comment you wish to vote for: ')
 
 #check vote status
+# noinspection PyInterpreter
+print('checking vote status - getting current post votes')
 result = s.get_active_votes(author, permlink)
+print(len(result), ' votes retrieved')
 
 if result:
-	x=0
-	while x<(len(result)+1):
-		if result[x]['voter'] == username:
+	for vote in result :
+		if vote['voter'] == username:
 			title = "This post/comment has already been voted for"
 			break
 		else:
@@ -40,10 +43,16 @@ option, index = pick(options, title)
 #voting commit
 if option == 'Add/Change vote':
 	weight = input('\n'+'Please advise weight of vote between -100.0 and 100 (not zero): ')
-	identifier = (author+'/'+permlink)
-	s.commit.vote(identifier, float(weight), username)
+	identifier = ('@'+author+'/'+permlink)
+	try:
+		print('Sending vote. You may see \'ERROR:root:Downgrade-retry... \' below. This does not necessarily mean the vote failed. Just that the node you are connected to was expected to support appbase but does not. A different error, however, is a problem.')
+		s.commit.vote(identifier, float(weight), username)
+		print('\n'+'Vote sent.')
+	except (RPCErrorRecoverable, RPCError) as err: #not printing the error, as we expect it to have been output by steem-python already.
+		print('\n'+'Exception encountered. Unable to vote')
+
 else:
 	print('Voting has been cancelled')
-	exit()
 
-print('\n'+'Vote has been submitted')
+exit()
+

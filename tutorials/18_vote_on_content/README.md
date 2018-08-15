@@ -58,6 +58,7 @@ s = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[postingkey])
 #### 3. Check vote status<a name="votestat"></a>
 
 In order to give the user an educated choice we first check whether they have already voted on the given post/comment. The author and permlink for the post is supplied via the console/terminal.
+If you need to find something to vote on, you can try (https://condenser.steem.vc/) YMMV.
 
 ```python
 #capture variables
@@ -76,9 +77,8 @@ This query returns a list of the current voters on the specified post/comment. T
 
 ```python
 if result:
-	x=0
-	while x<(len(result)+1):
-		if result[x]['voter'] == username:
+	for vote in result :
+		if vote['voter'] == username:
 			title = "This post/comment has already been voted for"
 			break
 		else:
@@ -99,17 +99,21 @@ option, index = pick(options, title)
 
 The user is given a choice to either continue with the vote or cancel the operation. If the user elects to continue, the `vote` function is executed. The weight of the vote is input from the UI and the identifier parameter is created by combining the author and permlink values.
 
+*It's important to note that the http client in steem-python will retry **IF** it sends an appbase query and detects a older, non-appbase error*
 ```python
 #voting commit
 if option == 'Add/Change vote':
 	weight = input('\n'+'Please advise weight of vote between -100.0 and 100 (not zero): ')
-	identifier = (author+'/'+permlink)
-	s.commit.vote(identifier, float(weight), username)
+	identifier = ('@'+author+'/'+permlink)
+	try:
+		print('Sending vote. ...')
+		s.commit.vote(identifier, float(weight), username)
+		print('\n'+'Vote sent.')
+	except (RPCErrorRecoverable, RPCError) as err: 
+		print('\n'+'Exception encountered. Unable to vote')
+
 else:
 	print('Voting has been cancelled')
-	exit()
-
-print('\n'+'Vote has been submitted')
 ```
 
 When the function is executed the selected vote weight overrides any value previously recorded on the blockchain.
