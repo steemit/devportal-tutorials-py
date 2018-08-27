@@ -22,15 +22,18 @@ The Steem python library has a built-in function to transmit transactions to the
 
 #### 1. App setup <a name="setup"></a>
 
-In this tutorial we only use 1 package:
+In this tutorial we use 2 packages:
 
 - `steem` - steem-python library and interaction with Blockchain
+- `pick` - helps select the query type interactively
 
 We import the libraries and connect to the `testnet`.
 
 ```python
 import steembase
 import steem
+from steem.amount import Amount
+from pick import pick
 
 # connect to testnet
 steembase.chains.known_chains['STEEM'] = {
@@ -70,16 +73,25 @@ The results of the query are displayed in the console/terminal.
 
 #### 4. Conversion amount <a name="convert"></a>
 
-Both the `amount` and the `to` parameters are assigned via input from the terminal/console. The amount has to be greater than zero and no more than the total available STEEM of the user. We also check the `to account` to make sure it's a valid account name.
+Both the `amount` and the `to` parameters are assigned via input from the terminal/console. The user is given the option to power up the STEEM to their own account or to another users account. The amount has to be greater than zero and no more than the total available STEEM of the user. We also check the `to account` to make sure it's a valid account name.
 
 ```python
-#account to power up to
-to_account = input('Please enter the ACCOUNT to where the STEEM will be transferred: ')
-#check valid username
-result = client.get_account(to_account)
-if (not result) :
-    print('Invalid username')
-    exit()
+#choice of account
+title = 'Please choose an option for an account to transfer to: '
+options = ['SELF', 'OTHER']
+# get index and selected transfer type
+option, index = pick(options, title)
+
+if (option == 'OTHER') :
+    #account to power up to
+    to_account = input('Please enter the ACCOUNT to where the STEEM will be transferred: ')
+    #check valid username
+    result = client.get_account(to_account)
+    if (not result) :
+        print('Invalid username')
+        exit()
+else :
+    to_account = username
 
 #amount to power up
 amount = float(input('Please enter the amount of STEEM to power up: '))

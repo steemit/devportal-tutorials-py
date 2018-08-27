@@ -1,6 +1,7 @@
 import steembase
 import steem
 from steem.amount import Amount
+from pick import pick
 
 # connect to testnet
 steembase.chains.known_chains['STEEM'] = {
@@ -21,13 +22,22 @@ balance = userinfo['balance']
 
 print('Available STEEM balance: ' + balance + '\n')
 
-#account to power up to
-to_account = input('Please enter the ACCOUNT to where the STEEM will be transferred: ')
-#check valid username
-result = client.get_account(to_account)
-if (not result) :
-    print('Invalid username')
-    exit()
+#choice of account
+title = 'Please choose an option for an account to transfer to: '
+options = ['SELF', 'OTHER']
+# get index and selected transfer type
+option, index = pick(options, title)
+
+if (option == 'OTHER') :
+    #account to power up to
+    to_account = input('Please enter the ACCOUNT to where the STEEM will be transferred: ')
+    #check valid username
+    result = client.get_account(to_account)
+    if (not result) :
+        print('Invalid username')
+        exit()
+else :
+    to_account = username
 
 #amount to power up
 amount = float(input('Please enter the amount of STEEM to power up: '))
@@ -42,7 +52,7 @@ else :
         exit()
     else :
         client.transfer_to_vesting(amount, to_account, username)
-        print('\n' + str(amount) + ' STEEM has been powered up successfully')
+        print('\n' + str(amount) + ' STEEM has been powered up successfully to ' + to_account)
 
 #get new account balance
 userinfo = client.get_account(username)
