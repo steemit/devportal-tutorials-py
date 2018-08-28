@@ -2,11 +2,11 @@
 
 How to claim rewards using Python.
 
-In this tutorial we will explain and show you how to check the STEEM, SBD and STEEM POWER rewards balances of an account on the **Steem** blockchain, and how to claim either a portion or all of the rewards using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we show you how to check the STEEM, SBD and STEEM POWER rewards balances of an account on the **Steem** blockchain, and how to claim either a portion or all of the rewards for an account using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
 
 ## Intro
 
-The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `claim_reward_balance` method found within the `commit` class in the library. Before we transmit a claim, we check the current rewards balance of the account so the user can see what is available to claim. We use the `get_account` function to check for this. The `claim` method has 4 parameters:
+The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `claim_reward_balance` method found within the `commit` class in the library. Before we transmit a claim, we use the `get_account` function to check the current rewards balance of the account to see what is available to claim. The `claim` method has 4 parameters:
 
 1.  _reward steem_ - The amount of STEEM to claim
 1.  _reward sbd_ - The amount of SBD to claim
@@ -43,11 +43,11 @@ steembase.chains.known_chains['STEEM'] = {
 }
 ```
 
-Because this tutorial alters the blockchain we connect to the testnet so we don't create spam on the production server.
+Because this tutorial alters the blockchain we connect to a testnet so we don't create spam on the production server.
 
 #### 2. User information and steem node <a name="userinfo"></a>
 
-We require the `private active key` of the user in order for the claim to be committed to the blockchain. This is why we have to specify this alongside the `testnet` node. The values are supplied via the terminal/console before we initialise the steem class. There is a demo account available to use with this tutorial but any account that is set up on the testnet can be used.
+We require the `private active key` of the user in order for the claim to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the steem class. There are some demo accounts available but we encourage you to create your own accounts on this testnet and create balances you can claim; it's good practice.
 
 ```python
 #capture user information
@@ -85,7 +85,7 @@ The result of the query is displayed in the console/terminal.
 
 #### 4. Claim commit <a name="commit"></a>
 
-An option is provided to either claim all rewards at once or to specify specific amounts to be claimed for each individual reward balance.
+An option is provided to either claim all rewards at once or to specify specific amounts to be claimed for each individual reward balance. If you are using one of Steemit's demo accounts, please leave some rewards for others to claim!
 
 ```python
 #choice of claim
