@@ -19,6 +19,10 @@ client = steem.Steem(nodes=['https://testnet.steem.vc'],keys=[wif])
 #get account reward balances
 userinfo = client.get_account(username)
 
+if(userinfo is None) :
+    print('Oops. Looks like user ' + username + ' doesn\'t exist on this chain!')
+    exit()
+
 reward_steem = userinfo['reward_steem_balance']
 reward_sbd = userinfo['reward_sbd_balance']
 reward_sp = userinfo['reward_vesting_steem']
