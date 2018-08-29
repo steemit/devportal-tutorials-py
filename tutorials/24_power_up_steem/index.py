@@ -16,8 +16,11 @@ wif = input('Enter private ACTIVE key: ') #demo account: 5KaNM84WWSqzwKzY82fXPaU
 #connect node and private active key
 client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
 
-#get account balance
+#check valid user and get account balance
 userinfo = client.get_account(username)
+if(userinfo is None) :
+    print('Oops. Looks like user ' + username + ' doesn\'t exist on this chain!')
+    exit()
 balance = userinfo['balance']
 
 print('Available STEEM balance: ' + balance + '\n')

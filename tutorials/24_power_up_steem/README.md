@@ -2,11 +2,11 @@
 
 How to power up your STEEM to STEEM POWER using Python.
 
-In this tutorial we will explain and show you how to power up your STEEM into STEEM POWER on the **Steem** blockchain using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we show you how to check the STEEM balance of an account on the **Steem** blockchain and how to power up your STEEM into STEEM POWER using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
 
 ## Intro
 
-The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `transfer_to_vesting` method found within the `commit` class in the library. When you power up you convert your STEEM into STEEM POWER to increase your influence on Steemit. Before we do the conversion, we check the current balance of the account to check how much STEEM is available. This is not strictly necessary as the process will automatically abort with the corresponding error, but it does give some insight into the process as a whole. We use the `get_account` function to check for this. The `transfer_to_vesting` method has 3 parameters:
+The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `transfer_to_vesting` method found within the `commit` class in the library. When you power up you convert your STEEM into STEEM POWER to increase your influence on Steemit. Before we do the conversion, we use the `get_account` function to check the current STEEM balance of the account to see what is available to power up. This is not strictly necessary but adds to the useability of the process. The `transfer_to_vesting` method has 3 parameters:
 
 1.  _amount_ - The amount of STEEM to power up. This must be of the `float` data type
 1.  _to_ - The account to where the STEEM will be powered up
@@ -42,11 +42,11 @@ steembase.chains.known_chains['STEEM'] = {
 }
 ```
 
-Because this tutorial alters the blockchain we connect to the testnet so we don't create spam on the production server.
+Because this tutorial alters the blockchain we connect to a testnet so we don't create spam on the production server.
 
 #### 2. User information and steem node <a name="userinfo"></a>
 
-We require the `private active key` of the user in order for the conversion to be committed to the blockchain. This is why we have to specify this alongside the `testnet` node. The values are supplied via the terminal/console before we initialise the steem class. There is a demo account available to use with this tutorial but any account that is set up on the testnet can be used.
+We require the `private active key` of the user in order for the conversion to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the steem class. There are some demo accounts available but we encourage you to create your own accounts on this testnet and create balances you can claim; it's good practice.
 
 ```python
 #capture user information
@@ -62,8 +62,11 @@ client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
 In order to give the user enough information to make the conversion we check the current balance of the account using the `get_account` function.
 
 ```python
-#get account balance
+#check valid user and get account balance
 userinfo = client.get_account(username)
+if(userinfo is None) :
+    print('Oops. Looks like user ' + username + ' doesn\'t exist on this chain!')
+    exit()
 balance = userinfo['balance']
 
 print('Available STEEM balance: ' + balance + '\n')
@@ -73,7 +76,7 @@ The results of the query are displayed in the console/terminal.
 
 #### 4. Conversion amount <a name="convert"></a>
 
-Both the `amount` and the `to` parameters are assigned via input from the terminal/console. The user is given the option to power up the STEEM to their own account or to another users account. The amount has to be greater than zero and no more than the total available STEEM of the user. We also check the `to account` to make sure it's a valid account name.
+Both the `amount` and the `to` parameters are assigned via input from the terminal/console. The user is given the option to power up the STEEM to their own account or to another user's account. The amount has to be greater than zero and no more than the total available STEEM of the user. If you are using one of Steemit's demo accounts, please leave some STEEM for others to power up! We also check the `to account` to make sure it's a valid account name.
 
 ```python
 #choice of account
