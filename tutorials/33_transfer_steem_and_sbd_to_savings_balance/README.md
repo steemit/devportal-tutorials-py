@@ -2,11 +2,11 @@
 
 How to transfer STEEM and SBD to savings using Python.
 
-In this tutorial we will explain and show you how to check the STEEM and SBD balance of an account and also how to transfer a portion of that to a "savings" account on the **Steem** blockchain using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we show you how to check the STEEM and SBD balance of an account on the **Steem** blockchain and also how to transfer a portion or all of that to a "savings" account using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
 
 ## Intro
 
-The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `transfer_to_savings` method found within the `commit` class in the library. Before we do the transfer, we check the current balance of the account to ensure that there are sufficient funds available. This is not strictly necessary as the process will automatically abort with the corresponding error, but it does give some insight into the process as a whole. We use the `get_account` function to check for this. The `transfer_to_savings` method has 5 parameters:
+The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `transfer_to_savings` method found within the `commit` class in the library. Before we do the transfer, we use the `get_account` function to check the current STEEM and SBD balance of the account to see what funds are available to transfer. This is not strictly necessary but adds to the useability of the process. The `transfer_to_savings` method has 5 parameters:
 
 1.  _amount_ - The amount of STEEM or SBD that the user wants to transfer. This parameter has to be of the `float` data type and is rounded up to 3 decimal spaces
 1.  _asset_ - A string value specifying whether `STEEM` or `SBD` is being transferred
@@ -43,11 +43,11 @@ steembase.chains.known_chains['STEEM'] = {
 }
 ```
 
-Because this tutorial alters the blockchain we connect to the testnet so we don't create spam on the production server.
+Because this tutorial alters the blockchain we connect to a testnet so we don't create spam on the production server.
 
 #### 2. User information and steem node <a name="userinfo"></a>
 
-We require the `private active key` of the user in order for the transfer to be committed to the blockchain. This is why we have to specify this alongside the `testnet` node. The values are supplied via the terminal/console before we initialise the steem class. There is a demo account available to use with this tutorial but any account that is set up on the testnet can be used.
+We require the `private active key` of the user in order for the transfer to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the steem class. There are some demo accounts available but we encourage you to create your own accounts on this testnet and create balances you can claim; it's good practice.
 
 ```python
 #capture user information
@@ -63,8 +63,11 @@ client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
 In order to give the user enough information to make the transfer we check the current balance of the account using the `get_account` function.
 
 ```python
-#get account balance for STEEM and SBD
+#check for valid account and get account balance for STEEM and SBD
 userinfo = client.get_account(username)
+if(userinfo is None) :
+    print('Oops. Looks like user ' + username + ' doesn\'t exist on this chain!')
+    exit()
 total_steem = userinfo['balance']
 total_sbd = userinfo['sbd_balance']
 
@@ -77,7 +80,7 @@ The result of the query is displayed in the console/terminal.
 
 #### 4. Transfer type and amount <a name="amount"></a>
 
-The user is given a choice on the type of transfer, or to cancel the process entirely. Once the user makes their choice we proceed to assign the `amount` as well as the `asset` parameter.
+The user is given a choice on the type of transfer, or to cancel the process entirely. If you are using one of Steemit's demo accounts, please leave some funds for others to transfer! Once the user makes their choice we proceed to assign the `amount` as well as the `asset` parameter.
 
 ```python
 #choice of transfer
