@@ -51,13 +51,13 @@ else :
 diff = dmp.diff_main(o_body, n_body)
 #Reduce the number of edits by eliminating semantically trivial equalities.
 dmp.diff_cleanupSemantic(diff)
+#create patch
+patch = dmp.patch_make(o_body, diff)
+#create new text based on patch
+patch_body = dmp.patch_toText(patch)
 #check patch length
-if (dmp.diff_levenshtein(diff) < len(o_body)) :
-    #create patch
-    patch = dmp.patch_make(o_body, diff)
-    #create new text based on patch
-    patch_body = dmp.patch_apply(patch, o_body)
-    new_body = patch_body[0]
+if (len(patch_body) < len(o_body)) :
+    new_body = patch_body
 else :
     new_body = n_body
     
