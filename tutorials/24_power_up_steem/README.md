@@ -70,6 +70,8 @@ if(userinfo is None) :
 balance = userinfo['balance']
 
 print('Available STEEM balance: ' + balance + '\n')
+
+input('Press any key to continue')
 ```
 
 The results of the query are displayed in the console/terminal.
@@ -91,9 +93,10 @@ if (option == 'OTHER') :
     #check valid username
     result = client.get_account(to_account)
     if (not result) :
-        print('Invalid username')
+        print(to_account + ' doesn\'t exist on this chain!')
         exit()
 else :
+    print('\n' + 'Power up STEEM to own account' + '\n')
     to_account = username
 
 #amount to power up

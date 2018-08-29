@@ -25,6 +25,8 @@ balance = userinfo['balance']
 
 print('Available STEEM balance: ' + balance + '\n')
 
+input('Press any key to continue')
+
 #choice of account
 title = 'Please choose an option for an account to transfer to: '
 options = ['SELF', 'OTHER']
@@ -37,9 +39,10 @@ if (option == 'OTHER') :
     #check valid username
     result = client.get_account(to_account)
     if (not result) :
-        print('Invalid username')
+        print(to_account + ' doesn\'t exist on this chain!')
         exit()
 else :
+    print('\n' + 'Power up STEEM to own account' + '\n')
     to_account = username
 
 #amount to power up
