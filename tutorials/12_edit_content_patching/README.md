@@ -2,7 +2,7 @@
 
 How to edit post content with diff_match_patch using Python.
 
-In this tutorial we will explain and show you how to patch and update posts/comments on the **Steem** blockchain using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we show you how to patch and update posts/comments on the **Steem** blockchain using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
 
 ## Intro
 
@@ -43,11 +43,11 @@ steembase.chains.known_chains['STEEM'] = {
 }
 ```
 
-Because this tutorial alters the blockchain we connect to the testnet so we don't create spam on the production server.
+Because this tutorial alters the blockchain we connect to a testnet so we don't create spam on the production server.
 
 #### 2. User information and steem node <a name="userinfo"></a>
 
-We require the `private posting key` of the user in order for the transfer to be committed to the blockchain. This is why we have to specify this alongside the `testnet` node. The values are supplied via the terminal/console before we initialise the steem class. There is a demo account available to use with this tutorial but any account that is set up on the testnet can be used.
+We require the `private posting key` of the user in order for the transfer to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the steem class. There are some demo accounts available but we encourage you to create your own accounts on this testnet and create balances you can claim; it's good practice.
 
 ```python
 #capture user information
@@ -63,6 +63,12 @@ client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
 The user inputs the author and permlink of the post that they wish to edit. It should be noted that a post cannot be patched once it has been archived. We suggest referring to the `submit post` tutorial to create a new post before trying the patch process.
 
 ```python
+#check valid username
+userinfo = client.get_account(username)
+if(userinfo is None) :
+    print('Oops. Looks like user ' + username + ' doesn\'t exist on this chain!')
+    exit()
+
 post_author = input('Please enter the AUTHOR of the post you want to edit: ')
 post_permlink = input('Please enter the PERMLINK of the post you want to edit: ')
 

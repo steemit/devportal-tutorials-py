@@ -15,6 +15,12 @@ wif = input('Enter private POSTING key: ') #demo account: 5JEZ1EiUjFKfsKP32b15Y7
 #connect node and private active key
 client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
 
+#check valid username
+userinfo = client.get_account(username)
+if(userinfo is None) :
+    print('Oops. Looks like user ' + username + ' doesn\'t exist on this chain!')
+    exit()
+
 post_author = input('Please enter the AUTHOR of the post you want to edit: ')
 post_permlink = input('Please enter the PERMLINK of the post you want to edit: ')
 
