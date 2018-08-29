@@ -107,7 +107,7 @@ We encourage users to play around with different values and data types to fully 
 
 1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
 1.  clone this repo
-1.  `cd tutorials/32_convert_SBD_to_STEEM`
+1.  `cd tutorials/32_convert_sbd_to_steem`
 1.  `pip install -r requirements.txt`
 1.  `python index.py`
 1.  After a few moments, you should see a prompt for input in terminal screen.
