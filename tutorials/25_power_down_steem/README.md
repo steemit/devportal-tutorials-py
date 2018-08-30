@@ -90,7 +90,7 @@ options = ['Power down ALL', 'Power down PORTION', 'Cancel Transaction']
 option, index = pick(options, title)
 ```
 
-Based on the input from the user the `amount` variable can be assigned and the transaction committed to the blockchain. The amount must be between zero and the total amount of vesting shares (both pending conversion and available VESTS combined). Any amount entered to be withdrawn will override the current amount of vesting shares pending withdrawal. If for example the user enters a new amount of '0' shares to be withdrawn, it will cancel the current withdrawal completely.
+Based on the input from the user the `amount` variable can be assigned and the transaction committed to the blockchain. The amount must be between zero and the total amount of vesting shares (both pending conversion and available VESTS combined). **The amount you set to be withdrawn will override the current amount of vesting shares pending withdrawal.** If for example the user enters a new amount of '0' shares to be withdrawn, it will cancel the current withdrawal completely.
 
 ```python
 #parameters: amount, account
