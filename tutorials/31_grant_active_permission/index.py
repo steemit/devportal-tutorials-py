@@ -64,18 +64,3 @@ else :
     #disallow(foreign, permission='posting', account=None, threshold=None)
     client.disallow(foreign=foreign_acc, permission='active', account=username, threshold=1)
     print('active permission for ' + foreign_acc + ' has been removed')
-
-
-
-
-
-
-
-
-    #     //adding of new account to active array
-    # activeAuth.account_auths.push([
-    #     newAccount,
-    #     parseInt(activeAuth.weight_threshold)
-    # ]);
-    # //sort array required for steem blockchain
-    # activeAuth.account_auths.sort();
