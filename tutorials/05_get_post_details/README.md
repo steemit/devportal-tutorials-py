@@ -155,7 +155,7 @@ That's it!
 
 1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
 1.  clone this repo
-1.  `cd tutorials/02_get_post_details`
+1.  `cd tutorials/05_get_post_details`
 1.  `pip install -r requirements.txt`
 1.  `python index.py`
 1.  After a few moments, you should see output in terminal/command prompt screen.
