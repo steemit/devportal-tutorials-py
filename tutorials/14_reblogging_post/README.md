@@ -77,9 +77,9 @@ That's it, if transaction is successful you shouldn't see any error messages, ot
 
 ### To Run the tutorial
 
-1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
+1.  [review dev requirements](../00_getting_started)
 1.  clone this repo
-1.  `cd tutorials/11_reblog_post`
+1.  `cd tutorials/14_reblogging_post`
 1.  `pip install -r requirements.txt`
 1.  `python index.py`
 1.  After a few moments, you should see output in terminal/command prompt screen.
