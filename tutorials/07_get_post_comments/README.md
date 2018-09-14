@@ -179,7 +179,7 @@ That's it!
 
 ### To Run the tutorial
 
-1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
+1.  [review dev requirements](00_getting_started#dev-requirements)
 1.  clone this repo
 1.  `cd tutorials/07_get_post_comments`
 1.  `pip install -r requirements.txt`

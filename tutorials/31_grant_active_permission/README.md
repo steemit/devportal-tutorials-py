@@ -126,7 +126,7 @@ And that's it!
 
 ### To Run the tutorial
 
-1.  [review dev requirements](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/00_getting_started#dev-requirements)
+1.  [review dev requirements](00_getting_started#dev-requirements)
 1.  clone this repo
 1.  `cd tutorials/31_grant_active_permission`
 1.  `pip install -r requirements.txt`
