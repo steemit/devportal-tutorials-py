@@ -7,7 +7,9 @@ These examples/tutorials will familiarize you with the basics of operating on th
 Each tutorial is located in its own folder, and has a README.md with an outline of the basic concepts
 and operations it intends to teach.
 
-The tutorials build on each other. It's suggested you go through them in-order.
+The tutorials build on each other. It's suggested you go through them in-order. 
+
+*Note: You'll notice the tutorial directories skip numbers in their prefixes. This is deliberate; we're mirroring our curriculum as much as possible accross languages, and getting to the less critical tutorials per-language later.*
 
 ## Tutorial List
 
