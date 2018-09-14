@@ -2,4 +2,4 @@
 
 How to pull a list of the trending tags from the blockchain using Python.
 
-Please refer to `15_search_accounts` which includes a tutorial for `trending tags` as well.
+Please refer to [15_search_accounts](tutorials/15_search_accounts) which includes a tutorial for `trending tags` as well.
