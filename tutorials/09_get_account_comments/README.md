@@ -195,7 +195,7 @@ That's it!
 
 ### To Run the tutorial
 
-1.  [review dev requirements](00_getting_started#dev-requirements)
+1.  [review dev requirements](../00_getting_started)
 1.  clone this repo
 1.  `cd tutorials/09_get_account_comments`
 1.  `pip install -r requirements.txt`

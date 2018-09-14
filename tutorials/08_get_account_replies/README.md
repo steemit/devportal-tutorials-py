@@ -83,7 +83,7 @@ Next, we will print the details obtained from the function. Because we only want
 
 ### To Run the tutorial
 
-1.  [review dev requirements](00_getting_started#dev-requirements)
+1.  [review dev requirements](../00_getting_started)
 1.  clone this repo
 1.  `cd tutorials/08_get_account_replies`
 1.  `pip install -r requirements.txt`
