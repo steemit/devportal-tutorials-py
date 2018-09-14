@@ -12,7 +12,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 ## Tutorial List
 
 1.  [Using keys securely](001_using_keys_securely) - Learn how Steem-Python library handles transaction signing with user's key and how to securely manage your private keys.
-1.  [Dev requirements](00_getting_started) - Environment requirements for developers
+1.  [Dev requirements](tutorials/00_getting_started) - Environment requirements for developers
 1.  [Get posts with filters](tutorials/04_get_posts) - How to query for posts with specific filters & tags.
 1.  [Get post details](tutorials/05_get_post_details) - How to get details of each post.
 1.  [Get voters list on content](tutorials/06_get_voters_list_on_post) - How to get voters info on post/comment.
