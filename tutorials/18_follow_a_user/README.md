@@ -17,7 +17,7 @@ The Steem python library has a built-in function to transmit transactions to the
 1.  [**App setup**](#setup) - Library install and import. Connection to testnet
 1.  [**User information and steem node**](#userinfo) - Input user information and connection to Steem node
 1.  [**Check author status**](#authorstat) - Validity check on requested autor to follow
-1.  [**Follow status**](followstat) - Check whether specified author is already followed
+1.  [**Follow status**](#followstat) - Check whether specified author is already followed
 1.  [**Follow/Unfollow commit**](#commit) - Follow/unfollow commit to the blockchain
 
 #### 1. App setup <a name="setup"></a>
