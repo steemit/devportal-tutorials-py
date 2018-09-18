@@ -52,7 +52,7 @@ Use the command line/terminal for the following instructions
 
 1.  cd into the tutorial you wish to run
 
-    ex: `cd tutorials/01_get_posts`
+    ex: `cd tutorials/04_get_posts`
 
 1.  Use pip to install dependencies
 
