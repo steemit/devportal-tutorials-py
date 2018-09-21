@@ -49,7 +49,7 @@ new_password = input('New password: ')
 
 ### 3. Connect to the blockchain<a name="connection"></a>
 
-From the parameters that have been collected we will generate the private key for the account and connect to the Steem blockchain. 
+From the parameters that have been collected we will generate the private key for the account and connect to the **Steem** blockchain. 
 
 ```python
 old_owner_key = str(
@@ -61,7 +61,7 @@ client = steem.Steem(keys=[old_owner_key])
 
 ### 4. Configure new keys<a name="configure"></a>
 
-We will now generate new keys for each role using the new password as well as create the json that will be committed to the Steem blockchain. We generate new keys using the new password for each of these roles.
+We will now generate new keys for each role using the new password as well as create the json that will be committed to the **Steem** blockchain. We generate new keys using the new password for each of these roles.
 
 ```python
 new_public_keys = {}
