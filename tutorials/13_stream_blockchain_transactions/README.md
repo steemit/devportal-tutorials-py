@@ -32,7 +32,7 @@ Above we create an instance of Blockchain which will give us the ability to stre
 
 #### 2. Stream blocks<a name="stream-blocks"></a>
 
-Next, we have a `main` function which fires at on-load and starts streaming blocks from network.
+Next we create an instance of `stream` and then loop through the steam as transactions are available and print them to the screen.
 
 ```python
 stream = blockchain.stream()
@@ -40,8 +40,6 @@ stream = blockchain.stream()
 for post in stream:
 	print(post)
 ```
-
-We first create an instance of the `stream` and then continually loop through the stream printing the transactions in json format.
 
 #### 3. Sample result<a name="sample-result"></a>
 
