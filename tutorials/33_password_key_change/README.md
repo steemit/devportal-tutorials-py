@@ -12,6 +12,9 @@ The Steem python library has a built-in function to update your account details 
 1.  _old_password_ - Your existing password for the account we are changing
 1.  _new_password_ - The new password we will be updating your account with
 
+**Caution:**
+This functionality does not work on the TestNet so we will be modifying the **live** blockchain.
+
 ## Steps
 
 1.  [**App setup**](#setup) - Library install and import. Connection to production
