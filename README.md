@@ -22,6 +22,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 1.  [Reblog post](tutorials/11_reblog_post) - Reblog or Resteem post
 1.  [Using keys securely](tutorials/12_using_keys_securely) - Using private keys securely
 1.  [Account reputation](tutorials/13_account_reputation) - Interpret account reputation
+1.  [Transfer STEEM & SBD](tutorials/32_convert_sbd_to_steem) - Transfer both STEEM and SBD from one account to another.
 
 
 ## To Run one of the tutorials
