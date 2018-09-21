@@ -40,7 +40,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 1.  [Get delegations by user](tutorials/29_get_delegations_by_user) - View the vesting delegations made by a user as well as the delegations that are expiring.
 1.  [Grant posting permission](tutorials/30_grant_posting_permission) - How to grant and revoke posting permission to another user.
 1.  [Grant active permission](tutorials/31_grant_active_permission) - How to grant and revoke active permission to another user.
-1.  [Change password and keys](tutorials/33_grant_active_permission) - How to change your accounts password and keys.
+1.  [Change password and keys](tutorials/33_password_key_change) - How to change your accounts password and keys.
 
 
 ## To Run one of the tutorials
