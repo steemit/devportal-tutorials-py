@@ -37,7 +37,7 @@ from steembase.account import PrivateKey
 from steembase import operations
 ```
 
-### 1. User input<a name="input"></a>
+### 2. User input<a name="input"></a>
 
 You will first be asked for the account that we will be modifying the password for. You will then be prompted to enter your existing password as well as your new password that we will update your account with.
 
@@ -47,7 +47,7 @@ old_password = input('Current password: ')
 new_password = input('New password: ')
 ```
 
-### 2. Connect to the blockchain<a name="connection"></a>
+### 3. Connect to the blockchain<a name="connection"></a>
 
 From the parameters that have been collected we will generate the private key for the account and connect to the Steem blockchain. 
 
@@ -59,7 +59,7 @@ old_owner_key = str(
 client = steem.Steem(keys=[old_owner_key])
 ```
 
-### 3. Configure new keys<a name="configure"></a>
+### 4. Configure new keys<a name="configure"></a>
 
 We will now generate new keys for each role using the new password as well as create the json that will be committed to the Steem blockchain. We generate new keys using the new password for each of these roles.
 
@@ -101,7 +101,7 @@ print("New data:")
 print(new_data)
 ```
 
-#### 4. Commit changes to blockchain <a name="commit"></a>
+#### 5. Commit changes to blockchain <a name="commit"></a>
 
 The `operations.AccountUpdate(**new_data)` creates the operation that will be committed to the blockchain using the new json object we have created.
 
