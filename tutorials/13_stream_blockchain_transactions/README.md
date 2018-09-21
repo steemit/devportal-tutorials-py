@@ -18,7 +18,7 @@ We are using the `blockchain.stream()` function provided by `steem-python` which
 
 #### 1. App setup<a name="app-setup"></a>
 
-In this tutorial we use 2 packages:
+In this tutorial we use 1 package:
 
 steem - steem-python library and interaction with Blockchain
 
