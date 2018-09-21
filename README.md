@@ -24,6 +24,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 1.  [Submit post](tutorials/10_submit_post) - How properly format and submit post.
 1.  [Submit comment](tutorials/11_submit_comment_reply) - How to submit reply to particular post.
 1.  [Edit content](tutorials/12_edit_content_patching) - How to properly patch edited content and submit edits.
+1.  [Stream transactions](tutorials/13_stream_blockchain_transactions) - How to stream transactions on the live blockchain.
 1.  [Reblog/Resteem a post](tutorials/14_reblogging_post) - How to reblog/resteem a post
 1.  [Search accounts](tutorials/15_search_accounts) - Search for user accounts by partial username.
 1.  [Search for tags](tutorials/16_search_tags) - Search for trending tags.
@@ -41,6 +42,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 1.  [Grant posting permission](tutorials/30_grant_posting_permission) - How to grant and revoke posting permission to another user.
 1.  [Grant active permission](tutorials/31_grant_active_permission) - How to grant and revoke active permission to another user.
 1.  [Change password and keys](tutorials/33_password_key_change) - How to change your accounts password and keys.
+
 
 
 ## To Run one of the tutorials
