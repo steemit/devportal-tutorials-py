@@ -8,8 +8,8 @@ steembase.chains.known_chains['STEEM'] = {
 }
 
 #capture user information
-username = input('Enter username: ') #demo account: cdemo
-wif = input('Enter private ACTIVE key: ') #demo account: 5KaNM84WWSqzwKzY82fXPaUW43idbLnPqf5SfjGxLfw6eV2kAP3
+username = input('Enter username: ') #demo account: demo01
+wif = input('Enter private ACTIVE key: ') #demo account: 5HxTntgeoLm4trnTz94YBsY6MpAap1qRVXEKsU5n1v2du1gAgVH
 
 #connect node and private active key
 client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
