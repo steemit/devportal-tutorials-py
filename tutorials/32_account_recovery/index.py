@@ -5,14 +5,14 @@ from beemgraphenebase.account import PasswordKey
 from beembase.objects import Permission
 
 #capture user information
-username = 'ndemo'#input('Enter username: ')
-old_owner_key = '5HwBVJ4BwkMr8snV17Yx1MBJCsuPVd9pFMWg2unFcCH42MedwYL'#input('Enter recent owner key: ')
-new_password = 'password'#input(Enter new password: ')
+username = ''   #input('Enter username: ')
+old_owner_key = '' #input('Enter recent owner key: ')
+new_password = ''   #input(Enter new password: ')
 
-recovery_account = 'initminer'
-recovery_account_key = '5JNHfZYKGaomSFvd4NUdQ9qMcEAC43kujbfjueTHpVapX1Kzq2n'
+recovery_account = ''
+recovery_account_key = ''
 
-s = Steem(node=['https://testnet.steemitdev.com'], keys=[recovery_account_key])
+s = Steem(node=['https://api.steemit.com'], keys=[recovery_account_key])
 
 new_owner_priv_key = PasswordKey(username, new_password, 'owner').get_private_key()
 print('new owner private key: ' + str(new_owner_priv_key))
@@ -36,14 +36,14 @@ request_op_data = {
 
 request_op = beembase.operations.Request_account_recovery(**request_op_data)
 
-input('press enter for request transmit')
+input('press enter for recovery request transmit')
 
 request_result = s.finalizeOp(request_op, recovery_account, "active")
 
 print('request result: ')
 print(request_result)
 
-input('press enter for recovery process')
+input('press enter for account recovery process')
 
 s = Steem(node=['https://testnet.steem.vc'], keys=new_owner_priv_key)
 
@@ -74,7 +74,7 @@ op_data = {
 
 op = beembase.operations.Recover_account(**op_data)
 
-input('press enter for recovery transmit')
+input('press enter for account recovery transmit')
 
 result = s.finalizeOp(op, username, "owner")
 
