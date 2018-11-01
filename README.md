@@ -32,7 +32,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 1.  [Follow a user](tutorials/18_follow_a_user) - Follow and unfollow a user / author.
 1.  [Get follower & following list](tutorials/19_get_follower_and_following_list) - Get the followers of a user/author & the authors that user is following.
 1.  [Account reputation](tutorials/20_account_reputation) - Learn how to interpret account reputation.
-1.  [Transfer STEEM & SBD](tutorials/21_transfer_STEEM_and_SBD) - Transfer both STEEM and SBD from one account to another.
+1.  [Transfer STEEM & SBD](tutorials/21_transfer_steem_and_sbd) - Transfer both STEEM and SBD from one account to another.
 1.  [Witness listing & voting](tutorials/22_witness_listing_and_voting) - Create a list of available witnesses as well as vote for and remove your vote for a witness.
 1.  [Claim rewards](tutorials/23_claim_rewards) - Learn how to claim rewards from unclaimed reward balance using Steemconnect as well as client signing method.
 1.  [Power up](tutorials/24_power_up_steem) - Power up an account's Steem using either Steemconnect or a client-side signing.
