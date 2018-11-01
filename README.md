@@ -13,7 +13,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 
 ## Tutorial List
 
-1.  [Using keys securely](001_using_keys_securely) - Learn how Steem-Python library handles transaction signing with user's key and how to securely manage your private keys.
+1.  [Using keys securely](tutorials/001_using_keys_securely) - Learn how Steem-Python library handles transaction signing with user's key and how to securely manage your private keys.
 1.  [Dev requirements](tutorials/00_getting_started) - Environment requirements for developers
 1.  [Get posts with filters](tutorials/04_get_posts) - How to query for posts with specific filters & tags.
 1.  [Get post details](tutorials/05_get_post_details) - How to get details of each post.
@@ -24,6 +24,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 1.  [Submit post](tutorials/10_submit_post) - How properly format and submit post.
 1.  [Submit comment](tutorials/11_submit_comment_reply) - How to submit reply to particular post.
 1.  [Edit content](tutorials/12_edit_content_patching) - How to properly patch edited content and submit edits.
+1.  [Stream transactions](tutorials/13_stream_blockchain_transactions) - How to stream transactions on the live blockchain.
 1.  [Reblog/Resteem a post](tutorials/14_reblogging_post) - How to reblog/resteem a post
 1.  [Search accounts](tutorials/15_search_accounts) - Search for user accounts by partial username.
 1.  [Search for tags](tutorials/16_search_tags) - Search for trending tags.
@@ -31,7 +32,7 @@ The tutorials build on each other. It's suggested you go through them in-order.
 1.  [Follow a user](tutorials/18_follow_a_user) - Follow and unfollow a user / author.
 1.  [Get follower & following list](tutorials/19_get_follower_and_following_list) - Get the followers of a user/author & the authors that user is following.
 1.  [Account reputation](tutorials/20_account_reputation) - Learn how to interpret account reputation.
-1.  [Transfer STEEM & SBD](tutorials/21_transfer_STEEM_and_SBD) - Transfer both STEEM and SBD from one account to another.
+1.  [Transfer STEEM & SBD](tutorials/21_transfer_steem_and_sbd) - Transfer both STEEM and SBD from one account to another.
 1.  [Witness listing & voting](tutorials/22_witness_listing_and_voting) - Create a list of available witnesses as well as vote for and remove your vote for a witness.
 1.  [Claim rewards](tutorials/23_claim_rewards) - Learn how to claim rewards from unclaimed reward balance using Steemconnect as well as client signing method.
 1.  [Power up](tutorials/24_power_up_steem) - Power up an account's Steem using either Steemconnect or a client-side signing.
@@ -40,6 +41,8 @@ The tutorials build on each other. It's suggested you go through them in-order.
 1.  [Get delegations by user](tutorials/29_get_delegations_by_user) - View the vesting delegations made by a user as well as the delegations that are expiring.
 1.  [Grant posting permission](tutorials/30_grant_posting_permission) - How to grant and revoke posting permission to another user.
 1.  [Grant active permission](tutorials/31_grant_active_permission) - How to grant and revoke active permission to another user.
+1.  [Change password and keys](tutorials/33_password_key_change) - How to change your accounts password and keys.
+
 
 
 ## To Run one of the tutorials
