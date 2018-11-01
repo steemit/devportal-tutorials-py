@@ -4,7 +4,7 @@ How to recover an account using Python.
 
 In this tutorial we show you how to request account recovery for a user and also recover that account on the **Steem** blockchain using the [beem-python](https://github.com/holgern/beem) library.
 
-The recovery system is used to recover hacked accounts. In the event that you lose your password, your account is lost forever. You must know your old password in order for this to work and this password needs to be valid within the past 30 days. This recovery process can only be executed once an hour. Stolen Account Recovery gives the rightful account owner 30 days to recover their account from the moment the thief changed their owner key.
+The recovery system is used to recover hacked accounts. In the event that you lose your password, your account is lost forever. You must know at least one old password that was used on your account within 30 days. This recovery process can only be executed once an hour. Stolen Account Recovery gives the rightful account owner 30 days to recover their account from the moment the thief changed their owner key.
 
 ## Intro
 
