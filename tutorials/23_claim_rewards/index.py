@@ -10,11 +10,11 @@ steembase.chains.known_chains['STEEM'] = {
 }
 
 #capture user information
-username = input('Enter username: ') #demo account: cdemo
-wif = input('Enter private ACTIVE key: ') #demo account: 5KaNM84WWSqzwKzY82fXPaUW43idbLnPqf5SfjGxLfw6eV2kAP3
+username = input('Enter username: ') #demo account: demo01
+wif = input('Enter private ACTIVE key: ') #demo account: 5HxTntgeoLm4trnTz94YBsY6MpAap1qRVXEKsU5n1v2du1gAgVH
 
 #connect node
-client = steem.Steem(nodes=['https://testnet.steem.vc'],keys=[wif])
+client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
 
 #get account reward balances
 userinfo = client.get_account(username)
@@ -70,7 +70,10 @@ else:
                 client.claim_reward_balance(claim_steem, claim_sbd, claim_vests, username)
                 print('\n' + 'Claim has been processed. New reward balances are:' + '\n')
         
+
 #get updated account reward balances
+input("Press enter for new account balances")
+
 userinfo = client.get_account(username)
 
 reward_steem = userinfo['reward_steem_balance']
